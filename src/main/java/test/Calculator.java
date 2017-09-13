@@ -1,10 +1,12 @@
 package test;
 
+import java.math.BigDecimal;
+
 public class Calculator {
 	
-	double a;
-	double b;
-	double result;
+	private double a;
+	private double b;
+	private double result;
 
 	void add(double a)
 	{
@@ -34,6 +36,19 @@ public class Calculator {
 		}
 	}
 	
+	void conditionalAdd(double a, double b)
+	{
+		if(true)
+		{
+			result+=a;
+		}
+		else
+		{
+			result+=b;
+		}
+		
+	}
+	
 	double getResult()
 	{
 		return result;
@@ -41,7 +56,7 @@ public class Calculator {
 		
 	boolean isZero()
 	{
-		return result==0.0;
+		return result==0.0;		
 	}
 	
 	boolean isOne()
@@ -52,6 +67,11 @@ public class Calculator {
 	boolean isNaN()
 	{
 		return result==Double.NaN;
+	}
+
+	void printResult()
+	{
+		System.out.println(new BigDecimal(result));
 	}
 
 	
